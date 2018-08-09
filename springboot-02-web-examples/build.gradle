@@ -3,6 +3,7 @@ buildscript {
 		springBootVersion = '2.0.4.RELEASE'
 	}
 	repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
 		mavenCentral()
 	}
 	dependencies {
@@ -24,12 +25,16 @@ repositories {
 	mavenCentral()
 }
 
+configurations {
+    all*.exclude module: 'spring-boot-starter-logging'
+}
+
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter')
-	compile('org.springframework.boot:spring-boot-starter-web'){
-        exclude module: "spring-boot-starter-logging"
-    }
-	compile('org.springframework.boot:spring-boot-starter-log4j2')
+	compile('org.springframework.boot:spring-boot-starter-freemarker')
+	compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-log4j2')
+	runtime('org.springframework.boot:spring-boot-devtools')
+	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
