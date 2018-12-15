@@ -1,6 +1,7 @@
 package com.mhy.springboot.service.impl;
 
 import com.mhy.springboot.aspect.GreetingAspect;
+import com.mhy.springboot.aspect.ProcTimeAspect;
 import com.mhy.springboot.service.WaiterService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,6 +34,7 @@ public class WaiterServiceImplTest {
         WaiterService service = new WaiterServiceImpl();
         AspectJProxyFactory factory = new AspectJProxyFactory(service);
         factory.addAspect(GreetingAspect.class);
+        factory.addAspect(ProcTimeAspect.class);
 
         WaiterService service2 = factory.getProxy();
         service2.serveTo("张三");
