@@ -1,6 +1,6 @@
-package com.mhy.springboot.service.impl;
+package com.mhy.springboot.server.impl;
 
-import com.mhy.springboot.service.WaiterService;
+import com.mhy.springboot.server.WaiterService;
 
 /**
  * @author mahaiyuan

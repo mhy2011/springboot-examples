@@ -1,16 +1,10 @@
-package com.mhy.springboot.service.impl;
+package com.mhy.springboot.server.impl;
 
 import com.mhy.springboot.aspect.GreetingAspect;
 import com.mhy.springboot.aspect.ProcTimeAspect;
-import com.mhy.springboot.service.WaiterService;
+import com.mhy.springboot.server.WaiterService;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.aop.aspectj.annotation.AspectJAdvisorFactory;
 import org.springframework.aop.aspectj.annotation.AspectJProxyFactory;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import static org.junit.Assert.*;
 
 /**
  * @author mahaiyuan

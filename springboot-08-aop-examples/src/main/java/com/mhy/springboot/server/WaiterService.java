@@ -1,4 +1,4 @@
-package com.mhy.springboot.service;
+package com.mhy.springboot.server;
 
 /**
  * @author mahaiyuan
